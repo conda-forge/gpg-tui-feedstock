@@ -1,0 +1,44 @@
+context:
+  version: 0.11.0
+
+package:
+  name: gpg-tui
+  version: ${{ version }}
+
+source:
+  url: https://github.com/orhun/gpg-tui/archive/v${{ version }}.tar.gz
+  sha256: 741def01fe84ee20c3eac1cbbe2533e1a9c387832cab31b5d233062338254ce1
+
+build:
+  number: 0
+  skip: win
+
+requirements:
+  build:
+    - ${{ compiler('rust') }}
+    - ${{ compiler('c') }}
+    - ${{ stdlib('c') }}
+    - cargo-bundle-licenses
+    - pkg-config
+  host:
+    - gpgme
+    - libgpg-error
+  run:
+    - gnupg
+
+tests:
+  - script:
+      - gpg-tui --help
+
+about:
+  license: MIT
+  license_file:
+    - LICENSE
+    - THIRDPARTY.yml
+  summary: Manage your GnuPG keys with ease!
+  homepage: https://github.com/orhun/gpg-tui
+  repository: https://github.com/orhun/gpg-tui
+
+extra:
+  recipe-maintainers:
+    - danielnachun
