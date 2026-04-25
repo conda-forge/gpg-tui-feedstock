@@ -5,7 +5,7 @@
 
 [workspace]
 name = "gpg-tui-feedstock"
-version = "3.53.3"  # conda-smithy version used to generate this file
+version = "3.61.1"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/gpg-tui-feedstock"
 authors = ["@conda-forge/gpg-tui"]
 channels = ["conda-forge"]

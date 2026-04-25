@@ -1,5 +1,5 @@
 context:
-  version: "0.11.1"
+  version: "0.11.2"
 
 package:
   name: gpg-tui
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/orhun/gpg-tui/archive/v${{ version }}.tar.gz
-  sha256: ecc232b42ff07888eb12a43daf5a956791a21efc85f6e71fbed9b9769ec50b50
+  sha256: 2cbd0186b76b7bb5b4a21c76b2f4b344c03194731729aac645465f33d665ef91
 
 build:
-  number: 2
+  number: 0
   skip: win
 
 requirements:
